@@ -26,4 +26,9 @@ def result(request):
             e_word = rotation.encrypt(user_word)
             d_word = rotation.decrypt(e_word)
     
-            return render(request, 'rot13_app/result.html', {'rotation': rotation, 'e_word': e_word, 'd_word': d_word})
+            return render(request, 'rot13_app/result.html', {
+                'rotation': rotation, 
+                'e_word': e_word, 
+                'd_word': d_word,
+                'rotn': rotn
+                })

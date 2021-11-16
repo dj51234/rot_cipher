@@ -41,4 +41,4 @@ class RotCipher:
         return self.decrypted
     
     def __str__(self):
-        return f'{self.decrypted} has been converted to {self.encrypted}'
+        return f'{self.decrypted} has been converted to: '

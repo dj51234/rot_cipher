@@ -1,3 +1,5 @@
+{% load static %}
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -5,13 +7,19 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Rot Cipher</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{% static 'rot13_app/styles.css' %}">
 </head>
 <body>
     <h1>Rot Cipher</h1>
     <form action="{% url 'result' %}" method="POST">
-        {% csrf_token %}
-        {{ form }}
-        <button type="submit">Encrypt</button>
+        <div class="form_container">
+            {% csrf_token %}
+            {{ form }}
+            <button type="submit" class="form_button">Encrypt</button>
+        </div>
     </form>
 </body>
 </html>
